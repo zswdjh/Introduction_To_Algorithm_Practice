@@ -6,6 +6,13 @@
 //  Copyright © 2018 Jing Liang. All rights reserved.
 //
 
+/*
+ 
+ 1. Hoare's schema is more efficient because it is efficient even when all the values are equal.
+ 2. Like Lomuto's algorithm, Hoare's algorithm still need O(n^2) when the input array is sorted.
+ 3. In Lumoto's algorithm, partition returns pivot's location and we need to operate quicksort on (p,pivot-1) and (pivot+1,r) while in Hoare's algorithm, the returned location is not actually pivot's location and we need to operate quicksort on (p,pivot) and (pivot+1,r)
+ 
+ */
 #include <iostream>
 #include <vector>
 int Lpartition(std::vector<int>& aVector,int aStart,int aEnd){
